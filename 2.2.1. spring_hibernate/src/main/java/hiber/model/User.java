@@ -1,5 +1,7 @@
 package hiber.model;
 
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
 
 @Entity
@@ -29,6 +31,7 @@ public class User {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
+      this.car = new Car();
    }
 
    public Long getId() {
@@ -73,7 +76,7 @@ public class User {
 
    @Override
    public String toString() {
-      return this.car != null ? "\nFirst Name = " + firstName +
+      return car.getModel() != null ? "\nFirst Name = " + firstName +
               "\nLast Name = " + lastName +
               "\nEmail = " + email +
               "\nCar = " + car :

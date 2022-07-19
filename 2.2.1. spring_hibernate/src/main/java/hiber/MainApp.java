@@ -18,7 +18,7 @@ public class MainApp {
       UserService userService = context.getBean(UserService.class);
 
       userService.add(new User("User1", "Lastname1", "user1@mail.ru"));
-      /*userService.add(new User("User2", "Lastname2", "user2@mail.ru"));
+      userService.add(new User("User2", "Lastname2", "user2@mail.ru"));
       userService.add(new User("User3", "Lastname3", "user3@mail.ru"));
       userService.add(new User("User4", "Lastname4", "user4@mail.ru"));
       User user1 = new User("Leonid", "Romanov", "romanovsparta@ya.ru");
@@ -27,7 +27,7 @@ public class MainApp {
       User user2 = new User("Михаил", "Горбачев", null);
       user2.setCar(new Car("ГАЗ", 13));
       userService.add(user2);
-      System.out.println(userService.getUserByCar("ВАЗ", 2123));*/
+      System.out.println(userService.getUserByCar("ВАЗ", 2123));
 
       List<User> users = userService.listUsers();
       users.forEach(System.out::println);
