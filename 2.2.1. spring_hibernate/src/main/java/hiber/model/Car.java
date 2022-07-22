@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Entity
 public class Car {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,9 +14,6 @@ public class Car {
     private String model;
 
     private int series;
-
-    @OneToOne
-    private User user;
 
     public Car() {}
 
@@ -46,14 +44,6 @@ public class Car {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     @Override

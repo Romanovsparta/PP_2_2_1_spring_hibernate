@@ -27,7 +27,7 @@ public class MainApp {
       User user2 = new User("Михаил", "Горбачев", null);
       user2.setCar(new Car("ГАЗ", 13));
       userService.add(user2);
-      System.out.println(userService.getUserByCar("ВАЗ", 2123));
+      System.out.println(userService.getUserByModelAndSeriesOfCar("ВАЗ", 2123));
 
       List<User> users = userService.listUsers();
       users.forEach(System.out::println);
